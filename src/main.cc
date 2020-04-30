@@ -5,6 +5,7 @@
 
 #include "program.h"
 #include "shader.h"
+#include "thwomp.h"
 #include "window.h"
 
 int main(int argc, char** argv) {
@@ -17,6 +18,7 @@ int main(int argc, char** argv) {
         GL_FRAGMENT_SHADER, "src/fragment.glsl")));
 
   Program program(std::move(shaders));
+  program.AddObject(std::unique_ptr<Thwomp>(new Thwomp(program.vao())));
 
   window.SetAspectRatioCallback([&program](float aspect_ratio){
     program.SetAspectRatio(aspect_ratio);

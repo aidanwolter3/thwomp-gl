@@ -18,6 +18,21 @@ cc_library(
     ],
 )
 
+cc_library(
+    name = "objects",
+    hdrs = [
+        "thwomp.h",
+    ],
+    srcs = [
+        "thwomp.cc",
+    ],
+    deps = [
+        ":base",
+        "@stb//:stb",
+        "//glad",
+    ],
+)
+
 cc_binary(
     name = "thwomp",
     srcs = [
@@ -25,6 +40,7 @@ cc_binary(
     ],
     deps = [
         ":base",
+        ":objects",
         "//glad",
     ],
     data = [
