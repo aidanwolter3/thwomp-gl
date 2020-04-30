@@ -25,5 +25,10 @@ cc_binary(
     ],
     deps = [
         ":base",
+        "//glad",
+    ],
+    data = [
+        "fragment.glsl",
+        "vertex.glsl",
     ],
 )
