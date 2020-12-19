@@ -12,9 +12,9 @@ cc_library(
         "window.cc",
     ],
     deps = [
-        "//glad",
-        "@glm//:glm",
-        "@glfw//:glfw",
+        "@glad",
+        "@glfw",
+        "@glm",
     ],
 )
 
@@ -28,8 +28,8 @@ cc_library(
     ],
     deps = [
         ":base",
-        "@stb//:stb",
-        "//glad",
+        "@glad",
+        "@stb",
     ],
 )
 
@@ -41,7 +41,7 @@ cc_binary(
     deps = [
         ":base",
         ":objects",
-        "//glad",
+        "@glad",
     ],
     data = [
         "fragment.glsl",
