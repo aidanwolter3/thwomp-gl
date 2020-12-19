@@ -22,7 +22,6 @@ cmake_external(
     lib_source = ":glm_files",
     static_libraries = ["libglm_static.a"],
     out_lib_dir = "",
-    out_include_dir = "glm",
     make_commands = ["make"],
     cache_entries = {
         "GLM_TEST_ENABLE": "OFF",
